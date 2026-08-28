@@ -132,7 +132,7 @@ const socialLinks = [
 
 // 文章列表
 const posts = [
-  { id: 1, title: '我的第一篇博客', date: '2026-08-28', link: '/posts/1' },
+  { id: 1, title: 'Hash冲突四种处理方式', date: '2025-12-27', link: 'https://blog.csdn.net/2401_86822182/article/details/156338197?spm=1001.2014.3001.5501' },
   { id: 2, title: 'Vue 3 入门指南', date: '2026-08-20', link: '/posts/2' },
 ]
 
