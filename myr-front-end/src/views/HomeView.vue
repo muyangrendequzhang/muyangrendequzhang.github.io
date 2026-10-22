@@ -35,18 +35,18 @@
           <h2>📝 最新文章</h2>
           <ul>
             <li v-for="post in posts" :key="post.id">
-              <a :href="post.link">{{ post.title }}</a>
+              <a :href="post.link" target="_blank">{{ post.title }}</a>
               <span class="date">{{ post.date }}</span>
             </li>
           </ul>
         </div>
 
 
-        <div class="projects">
+        <div class="projects" v-if="projects.length">
           <h2>最新项目</h2>
           <ul>
             <li v-for="project in projects" :key="project.id">
-              <a :href="project.link">{{project.title}}}</a>
+              <a :href="project.link" target="_blank" >{{project.title}}</a>
             </li>
           </ul>
         </div>
@@ -231,19 +231,19 @@ h1 {
 .social-links a:hover {
   background: #e0e4ea;
 }
-
-.posts h2 projects,
+.projects h2,
+.posts h2,
 .skills h2 {
   font-size: 18px;
   margin: 24px 0 12px 0;
 }
-
+.projects ul,
 .posts ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-
+.projects ul,
 .posts li {
   display: flex;
   justify-content: space-between;
@@ -251,12 +251,13 @@ h1 {
   padding: 8px 0;
   border-bottom: 1px solid #f0f0f0;
 }
-
+.projects li a,
 .posts li a {
   color: #2c3e50;
   text-decoration: none;
 }
 
+.projects li a:hover,
 .posts li a:hover {
   color: #42b883;
   text-decoration: underline;
