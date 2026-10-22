@@ -41,6 +41,16 @@
           </ul>
         </div>
 
+
+        <div class="projects">
+          <h2>最新项目</h2>
+          <ul>
+            <li v-for="project in projects" :key="project.id">
+              <a :href="project.link">{{project.title}}}</a>
+            </li>
+          </ul>
+        </div>
+
         <!-- 技能标签 -->
         <div class="skills" v-if="skills.length">
           <h2>🛠️ 技术栈</h2>
@@ -133,7 +143,11 @@ const socialLinks = [
 // 文章列表
 const posts = [
   { id: 1, title: 'Hash冲突四种处理方式', date: '2025-12-27', link: 'https://blog.csdn.net/2401_86822182/article/details/156338197?spm=1001.2014.3001.5501' },
-  { id: 2, title: 'Vue 3 入门指南', date: '2026-08-20', link: '/posts/2' },
+]
+
+// 项目列表
+const projects = [
+  { id: 1, title: 'agent项目', link: 'https://muyangren.us.ci/login'}
 ]
 
 // 掌握的技术栈
@@ -218,7 +232,7 @@ h1 {
   background: #e0e4ea;
 }
 
-.posts h2,
+.posts h2 projects,
 .skills h2 {
   font-size: 18px;
   margin: 24px 0 12px 0;
